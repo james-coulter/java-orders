@@ -19,6 +19,7 @@ public class Order {
 
     private String orderdescription;
 
+
     public Order(long ordnum, double ordamount, double advanceamount, Customer customer, String orderdescription) {
         this.ordnum = ordnum;
         this.ordamount = ordamount;
