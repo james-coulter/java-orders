@@ -28,7 +28,6 @@ public class CustomerController {
     @GetMapping(value = "/orders", produces = {"application/json"})
     public ResponseEntity<?> listAllOrders() {
         List<Customer> myCustomers = customerService.findAllCustomers();
-//        List<Order> myOrders = orderService.findAllOrders();
         return new ResponseEntity<>(myCustomers, HttpStatus.OK);
     }
 
