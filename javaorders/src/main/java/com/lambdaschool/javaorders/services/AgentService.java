@@ -4,6 +4,6 @@ import com.lambdaschool.javaorders.models.Agent;
 
 public interface AgentService {
 
-    Agent getAgentById(long id);
+    Agent findAgentById(long id);
 
 }

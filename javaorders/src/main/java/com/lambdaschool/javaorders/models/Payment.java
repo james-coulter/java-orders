@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "payments")
@@ -19,7 +18,7 @@ public class Payment {
     private String type;
 
     @ManyToMany(mappedBy = "payments")
-    @JsonIgnoreProperties("orders")
+//    @JsonIgnoreProperties("payments")
     private List<Order> orders = new ArrayList<>();
 
     public Payment(long paymentid, String type) {

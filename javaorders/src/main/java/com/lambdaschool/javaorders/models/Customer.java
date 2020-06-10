@@ -28,14 +28,14 @@ public class Customer {
     private String phone;
 
     @ManyToOne
-    @JsonIgnoreProperties("customers")
     @JoinColumn(name = "agentcode", nullable = false)
+//    @JsonIgnoreProperties("customer")
     private Agent agents;
 
     @OneToMany(mappedBy = "customer",
             cascade = CascadeType.ALL,
             orphanRemoval = true)
-    @JsonIgnoreProperties("customer")
+//    @JsonIgnoreProperties("customer")
     private List<Order> orders = new ArrayList<>();
 
     public Customer(String custname, String custcity, String workingarea, String custcountry, String grade, double openingamt, double receiveamt, double paymentamt, double outstandingamt, String phone, Agent agents) {
