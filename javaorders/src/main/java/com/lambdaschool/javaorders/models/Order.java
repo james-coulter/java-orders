@@ -81,6 +81,14 @@ public class Order {
         this.orderdescription = orderdescription;
     }
 
+    public List<Payment> getPayments() {
+        return payments;
+    }
+
+    public void setPayments(List<Payment> payments) {
+        this.payments = payments;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
@@ -88,7 +96,8 @@ public class Order {
                 ", ordamount=" + ordamount +
                 ", advanceamount=" + advanceamount +
                 ", customer=" + customer +
-                ", orderdescription='" + orderdescription + '\'' +
+                ", orderdescription='" + orderdescription +
+                ", payments=" + payments +'\'' +
                 '}';
     }
 }

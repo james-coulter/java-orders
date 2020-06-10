@@ -23,7 +23,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public Order findOrderById(long id) {
+    public Order findOrdersById(long id) {
         return ordrepos.findById(id).orElseThrow( () -> new EntityNotFoundException("Order " + id + " Not Found"));
     }
 

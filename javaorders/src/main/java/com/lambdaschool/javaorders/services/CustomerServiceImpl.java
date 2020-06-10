@@ -28,9 +28,10 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public List<Customer> findByNameLike(String likename)
+    public List<Customer> findByNameLike(String thename)
     {
-        return custrepos.findCustomersByCustnameContainingIgnoringCase(likename);
+        ArrayList<Customer> list = custrepos.findCustomersByCustnameContainingIgnoringCase(thename);
+        return list;
     }
 
 //    @Override
